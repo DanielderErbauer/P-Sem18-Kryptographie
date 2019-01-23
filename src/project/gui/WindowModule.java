@@ -22,12 +22,12 @@ public class WindowModule extends JPanel{
 	
 	public WindowModule(int pos, int space) {
 		
-		this.setBackground(Color.BLACK);
+		this.setBackground(Color.DARK_GRAY);
 		this.setBounds(10, 40 * pos + space, 375, 40);
 		
 		cb1 = new JCheckBox("CAESAR");
-		cb2 = new JCheckBox("SHA-256");
-		cb3 = new JCheckBox("SHA-1024");
+		cb2 = new JCheckBox("AES");
+		cb3 = new JCheckBox("NOT IMPLEMENTED");
 		
 		EventHandler handler = new EventHandler();
 		
@@ -61,6 +61,7 @@ public class WindowModule extends JPanel{
 		this.next = next;
 	}
 	
+	@SuppressWarnings("Duplicates")
 	class EventHandler implements ActionListener {
 
 		@Override
