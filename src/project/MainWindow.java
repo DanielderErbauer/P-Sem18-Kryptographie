@@ -153,8 +153,7 @@ public class MainWindow extends JFrame{
                             break;
                         case "AES":
                             if(textFieldAesKey.getText().length() != 16){
-                                JFrame popup = new JFrame();
-                                JOptionPane.showMessageDialog(popup, "Key must have a length of 16 chars.\nCurrent length is " + textFieldAesKey.getText().length());
+                                JOptionPane.showMessageDialog(instance, "Key must have a length of 16 chars.\nCurrent length is " + textFieldAesKey.getText().length());
                             }
                             try {
                                 textToEnkrypt = AESCipher.aesEncryptString(textToEnkrypt, textFieldAesKey.getText());
